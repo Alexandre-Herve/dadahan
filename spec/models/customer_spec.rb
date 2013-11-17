@@ -14,8 +14,8 @@ describe Customer do
 
       cu.set_type!(:is_public)
 
-      cu.is_public.should be_true
-      cu.is_individual.should be_false
+      cu.reload.is_public.should be_true
+      cu.reload.is_individual.should be_false
     end
 
   end
