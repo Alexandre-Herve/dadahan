@@ -1,12 +1,10 @@
-<h1>Listing customers</h1>
+<h1>Liste des clients</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Is private</th>
-      <th>Is public</th>
-      <th>Is individual</th>
-      <th>Name</th>
+      <th>Type de client</th>
+      <th>Nom</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,13 +14,11 @@
   <tbody>
     <% @customers.each do |customer| %>
       <tr>
-        <td><%= customer.is_private %></td>
-        <td><%= customer.is_public %></td>
-        <td><%= customer.is_individual %></td>
+        <td><%= customer.type %></td>
         <td><%= customer.name %></td>
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Afficher', customer %></td>
+        <td><%= link_to 'Editer', edit_customer_path(customer) %></td>
+        <td><%= link_to 'Supprimer', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Customer', new_customer_path %>
+<%= link_to 'Ajouter un nouveau client', new_customer_path, :class => "btn btn-primary pull-right" %>

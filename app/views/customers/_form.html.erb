@@ -11,38 +11,33 @@
     </div>
   <% end %>
 
-  <div class="row">
-    <div class="col-md-4">
-      <div class="form-group">
-        <div class="field">
-          <%= f.label :is_private %><br>
-          <%= f.radio_button :type, "is_private" %>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="field">
-          <%= f.label :is_public %><br>
-          <%= f.radio_button :type, "is_public" %>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="field">
-          <%= f.label :is_individual %><br>
-          <%= f.radio_button :type, "is_individual" %>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="field">
-          <%= f.label :name %><br>
-          <%= f.text_field :name, :class => 'form-control' %>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="actions">
-          <%= f.submit 'Enregistrer', :class => 'btn btn-primary pull-right' %>
-        </div>
-      </div>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :client_privé %><br>
+      <%= f.radio_button :set_type!, "is_private" %>
     </div>
-  </div><!-- /.col -->
-</div><!-- /.row -->
+  </div>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :client_public %><br>
+      <%= f.radio_button :set_type!, "is_public" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :client_individuel %><br>
+      <%= f.radio_button :set_type!, "is_individual" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="actions">
+      <%= f.submit 'Enregistrer', :class => 'btn btn-primary pull-right' %>
+    </div>
+  </div>
 <% end %>
