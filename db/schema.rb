@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131117143818) do
+ActiveRecord::Schema.define(version: 20131117151836) do
 
   create_table "customers", force: true do |t|
     t.boolean  "is_private"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20131117143818) do
     t.float    "surface_in_squared_meters"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "customer_id"
   end
 
 end

@@ -4,9 +4,9 @@
       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
 
       <ul>
-      <% @project.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @project.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -43,7 +43,14 @@
     <%= f.label :surface_in_squared_meters %><br>
     <%= f.text_field :surface_in_squared_meters %>
   </div>
+
+  <div class="field">
+    <%= f.label :customer_id %><br>
+    <%= f.collection_select(:customer_id, Customer.all,:id,:name, {:prompt => true})%>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
