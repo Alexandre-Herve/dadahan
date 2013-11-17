@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is private:</strong>
+  <%= @customer.is_private %>
+</p>
+
+<p>
+  <strong>Is public:</strong>
+  <%= @customer.is_public %>
+</p>
+
+<p>
+  <strong>Is individual:</strong>
+  <%= @customer.is_individual %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

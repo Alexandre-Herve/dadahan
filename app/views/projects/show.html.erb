@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @project.date %>
+</p>
+
+<p>
+  <strong>Is ancient:</strong>
+  <%= @project.is_ancient %>
+</p>
+
+<p>
+  <strong>Is modern:</strong>
+  <%= @project.is_modern %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @project.address %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @project.program %>
+</p>
+
+<p>
+  <strong>Amount in euro:</strong>
+  <%= @project.amount_in_euro %>
+</p>
+
+<p>
+  <strong>Surface in squared meters:</strong>
+  <%= @project.surface_in_squared_meters %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
