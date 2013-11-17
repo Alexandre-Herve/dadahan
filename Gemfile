@@ -9,7 +9,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
+group :test, :development do
 gem 'rspec-rails'
+gem 'autotest'
+end
 
 group :doc do
   gem 'sdoc', require: false
