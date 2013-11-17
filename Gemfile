@@ -10,8 +10,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :test, :development do
-gem 'rspec-rails'
-gem 'autotest'
+  gem 'rspec-rails'
+  gem 'autotest'
+  gem 'factory_girl_rails'
 end
 
 group :doc do
