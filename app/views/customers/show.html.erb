@@ -1,24 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Is private:</strong>
-  <%= @customer.is_private %>
-</p>
-
-<p>
-  <strong>Is public:</strong>
-  <%= @customer.is_public %>
-</p>
-
-<p>
-  <strong>Is individual:</strong>
-  <%= @customer.is_individual %>
-</p>
-
-<p>
-  <strong>Name:</strong>
+  <strong>Nom:</strong>
   <%= @customer.name %>
 </p>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+<p>
+  <strong>Type :</strong>
+  <%= @customer.type %>
+</p>
+
+<%= link_to 'Retour', customers_path, :class => "btn btn-warning"%>
+&nbsp
+<%= link_to 'Éditer', edit_customer_path(@customer), :class => "btn btn-primary"%> 
