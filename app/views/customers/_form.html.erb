@@ -4,30 +4,45 @@
       <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
 
       <ul>
-      <% @customer.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @customer.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :is_private %><br>
-    <%= f.check_box :is_private %>
-  </div>
-  <div class="field">
-    <%= f.label :is_public %><br>
-    <%= f.check_box :is_public %>
-  </div>
-  <div class="field">
-    <%= f.label :is_individual %><br>
-    <%= f.check_box :is_individual %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :is_private %><br>
+          <%= f.radio_button :type, "is_private" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :is_public %><br>
+          <%= f.radio_button :type, "is_public" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :is_individual %><br>
+          <%= f.radio_button :type, "is_individual" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :name %><br>
+          <%= f.text_field :name, :class => 'form-control' %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="actions">
+          <%= f.submit 'Enregistrer', :class => 'btn btn-primary pull-right' %>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.col -->
+</div><!-- /.row -->
 <% end %>
