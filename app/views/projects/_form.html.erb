@@ -47,6 +47,7 @@
   <div class="field">
     <%= f.label :customer_id %><br>
     <%= f.collection_select(:customer_id, Customer.all,:id,:name, {:prompt => true})%>
+    <%= link_to 'créer un nouveau client', new_customer_path%>
   </div>
 
   <div class="actions">
