@@ -1,6 +1,6 @@
 class Customer < ActiveRecord::Base
   def type 
   end
-  def set_type!
+  def type_to_set
   end
 end

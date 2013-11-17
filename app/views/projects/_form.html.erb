@@ -11,47 +11,48 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :is_ancient %><br>
-    <%= f.check_box :is_ancient %>
-  </div>
-  <div class="field">
-    <%= f.label :is_modern %><br>
-    <%= f.check_box :is_modern %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address, :class => "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, :class => "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :program %><br>
-    <%= f.text_area :program, :class => "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :amount_in_euro %><br>
-    <%= f.text_field :amount_in_euro, :class => "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :surface_in_squared_meters %><br>
-    <%= f.text_field :surface_in_squared_meters, :class => "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :customer_id %><br>
+  <div class="form-group">
+    <%= f.label :client%><br>
     <%= f.collection_select(:customer_id, Customer.all,:id,:name, {:prompt => true})%>
     <%= link_to 'créer un nouveau client', new_customer_path%>
   </div>
 
+  <div class="form-group">
+    <div class="form-group">
+      <%= f.label :date %><br>
+      <%= f.date_select :date, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :type %><br>
+    <%= f.radio_button :type_to_set, "is_ancient" %>
+    <%= f.label :ancien %>
+    <%= f.radio_button :type_to_set, "is_modern" %>
+    <%= f.label :neuf %>
+  </div>
+  <div class="form-group">
+    <%= f.label :addresse %><br>
+    <%= f.text_field :address, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :programme %><br>
+    <%= f.text_area :program, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :montant_en_euro %><br>
+    <%= f.text_field :amount_in_euro, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :surface_en_mètres_carrés %><br>
+    <%= f.text_field :surface_in_squared_meters, :class => "form-control" %>
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Enregistrer', :class => 'btn btn-primary pull-right' %>
   </div>
 
 <% end %>

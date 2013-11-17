@@ -1,22 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>Date :</strong>
   <%= @project.date %>
 </p>
 
 <p>
-  <strong>Is ancient:</strong>
-  <%= @project.is_ancient %>
+  <strong>Moderne ou ancient :</strong>
+  <%= @project.type %>
 </p>
 
 <p>
-  <strong>Is modern:</strong>
-  <%= @project.is_modern %>
-</p>
-
-<p>
-  <strong>Address:</strong>
+  <strong>Addresse :</strong>
   <%= @project.address %>
 </p>
 
@@ -26,19 +21,19 @@
 </p>
 
 <p>
-  <strong>Program:</strong>
+  <strong>Programme :</strong>
   <%= @project.program %>
 </p>
 
 <p>
-  <strong>Amount in euro:</strong>
+  <strong>Montant en euros :</strong>
   <%= @project.amount_in_euro %>
 </p>
 
 <p>
-  <strong>Surface in squared meters:</strong>
+  <strong>Surface en mètres carrés :</strong>
   <%= @project.surface_in_squared_meters %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to 'Éditer', edit_project_path(@project), :class => "btn btn-primary pull-right" %>
+<%= link_to 'Retour', projects_path, :class => "btn btn-warning pull-right", :style =>"margin-right: 10px" %>
